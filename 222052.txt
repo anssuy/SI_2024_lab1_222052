@@ -1,0 +1,197 @@
+4. git init (иницијализира git)
+Initialized empty Git repository in C:/Users/Ana/Desktop/SI_2024_lab1_222052/.git/
+
+5. git remote add origin https://github.com/anssuy/SI_2024_lab1_222052 (го поврзува локалниот репозиториум со оддалечениот)
+
+6.1 git add README.md (додава датотека README.md)
+
+6.2 git commit -m "Initial commit" (прави commit)
+[master (root-commit) 156da3f] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+7.1 git add *.java (додава нови или променети датотеки што завршуваат на .java во сегашниот директориум)
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+7.2 git commit -m "Add starter code" (прави commit)
+[master a5630f5] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+8. git push https://github.com/anssuy/SI_2024_lab1_222052 (ја синхронизира сегашната гранка master)
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.11 KiB | 227.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/anssuy/SI_2024_lab1_222052
+ * [new branch]      master -> master
+
+9.1 git branch bug1 (креира нова гранка bug1)
+
+9.2 git branch bug2 (креира нова гранка bug2)
+
+10. git checkout bug1 (се префрла на гранката bug1)
+
+11.1 git add *.java (додава нови или променети датотеки што завршуваат на .java во сегашниот директориум)
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+
+11.2 git commit -m "Fix wrong condition in filterOddLengthStrings" (прави commit)
+[bug1 c439736] Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+12. git checkout bug2 (се префрла на гранката bug2)
+
+13.1 git add *.java (додава нови или променети датотеки што завршуваат на .java во сегашниот директориум)
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+13.2 git commit -m "Fix wrong condition in makeBigStringFrom" (прави commit)
+[bug2 aa2266c] Fix wrong condition in makeBigStringFrom
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+14. git checkout bug1 (се префрла на гранката bug1)
+
+15.1 git add *.java (додава нови или променети датотеки што завршуваат на .java во сегашниот директориум)
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+
+15.2 git commit -m "Call method filterOddLengthStrings in main class" (прави commit)
+[bug1 7db66a9] Call method filterOddLengthStrings in main class
+ 1 file changed, 1 insertion(+)
+
+16. git checkout bug2 (се префрла на гранката bug2)
+
+17.1 git add *.java (додава нови или променети датотеки што завршуваат на .jаvа во сегашниот директориум)
+
+17.2 git commit -m "Call method makeBigStringFrom in main class" (прави commit)
+[bug2 36049bf] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+
+18.1 git push https://github.com/anssuy/SI_2024_lab1_222052 (синхронизирa bug2)
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 665 bytes | 332.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/anssuy/SI_2024_lab1_222052/pull/new/bug2
+remote:
+To https://github.com/anssuy/SI_2024_lab1_222052
+ * [new branch]      bug2 -> bug2
+
+18.2 git checkout bug1 (се префрла на гранката bug1)
+
+18.3 git push https://github.com/anssuy/SI_2024_lab1_222052 (синхронизира bug1)
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 723 bytes | 241.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/anssuy/SI_2024_lab1_222052/pull/new/bug1
+remote:
+To https://github.com/anssuy/SI_2024_lab1_222052
+ * [new branch]      bug1 -> bug1
+
+19. git checkout master (се префрла на гранката master)
+
+20. git merge bug1 (спојување со bug1, стратегија Fast-forward, нема конфликт)
+Updating a5630f5..7db66a9
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+21. git push https://github.com/anssuy/SI_2024_lab1_222052 (синхронизира master)
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/anssuy/SI_2024_lab1_222052
+   a5630f5..7db66a9  master -> master
+
+22. git checkout bug2 (се префрла на гранката bug2)
+
+23.1 git rebase master (пренесување на измените, се јавува конфликт во SILab1Main.java)
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply 36049bf... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 36049bf... Call method makeBigStringFrom in main class
+
+23.2 git add SILab1Main.java (конфликтот го решив рачно, се додава променетата датотека)
+
+23.3 git status (моменталниот статус на локалниот репозиториум)
+interactive rebase in progress; onto 7db66a9
+Last commands done (2 commands done):
+   pick aa2266c Fix wrong condition in makeBigStringFrom
+   pick 36049bf Call method makeBigStringFrom in main class
+No commands remaining.
+You are currently rebasing branch 'bug2' on '7db66a9'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SILab1Main.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+
+23.4 git rebase --continue (се продолжува rebase после решавањето на конфликтите)
+[detached HEAD d58744e] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+Successfully rebased and updated refs/heads/bug2.
+
+24. git checkout master (се префрла на гранката master)
+
+25. git merge bug2 (нема конфликт, успешно е спојувањето, стратегијата е fast-forward)
+Updating 7db66a9..d58744e
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_2.java   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+26.1 git push https://github.com/anssuy/SI_2024_lab1_222052 (синхронизира master)
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 653 bytes | 326.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/anssuy/SI_2024_lab1_222052
+   7db66a9..d58744e  master -> master
+
+26.2 git checkout bug1 (се префрла на гранката bug1)
+
+26.3 git push https://github.com/anssuy/SI_2024_lab1_222052 (синхронизира bug1)
+Everything up-to-date
+
+26.4 git checkout bug2 (се префрла на гранката bug2)
+
+26.5 git push https://github.com/anssuy/SI_2024_lab1_222052 (синхронизира bug2, но неуспешно)
+To https://github.com/anssuy/SI_2024_lab1_222052
+ ! [rejected]        bug2 -> bug2 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/anssuy/SI_2024_lab1_222052'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+27. git push --force https://github.com/anssuy/SI_2024_lab1_222052 (принудно синхронизирање на bug2)
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/anssuy/SI_2024_lab1_222052
+ + 36049bf...d58744e bug2 -> bug2 (forced update)
+
+28. git checkout master (се префрла на гранката master)
